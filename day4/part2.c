@@ -68,5 +68,11 @@ int main(int argc, char * argv[]) {
   }
 
   printf("There are %d valid lines\n", valid);
+
+  if(fclose(fp)) {
+    perror("error closing file");
+    return 1;
+  }
+  
   return 0;
 }
